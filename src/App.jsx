@@ -25,11 +25,11 @@ const App = () => {
   }
 
   return(
-    <div className="h-screen lg:flex bg-black text-white overflow-auto">
+    <div className="h-screen lg:flex text-white overflow-auto bg-[url('https://plus.unsplash.com/premium_photo-1677402408071-232d1c3c3787?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-no-repeat bg-center bg-blend-multiply bg-cover ">
       <form onSubmit={(e) => {
         submitHandler(e)
       }} className="flex gap-4 lg:w-1/2 p-10 flex-col items-start">
-        <h1 className="text-2xl lg:text-4xl mb-2 font-bold text-center">Add Notes</h1>
+        <h1 className="text-2xl lg:text-4xl mb-2 font-bold ">Add Notes</h1>
         <input 
         type="text" 
         placeholder="Enter Notes Heading" 
@@ -55,15 +55,15 @@ const App = () => {
         Add Note
         </button>
       </form>
-      <div className="lg:w-1/2 lg:border-l-2 p-10 ">
+      <div className="lg:w-1/2 lg:border-l-2 p-10  ">
         <h1 className="text-2xl lg:text-4xl font-bold  text-center ">Recent Notes</h1>
         <div className=" flex flex-wrap justify-center items-center lg:items-start lg:justify-start gap-5 lg:mt-6  lg:h-[90%] overflow-auto  max-h-screen ">
           {displayNotes.map(function (elem, index)  {
             return  <div key={index} 
-            className="flex justify-between flex-col items-start relative h-52 w-40 bg cover rounded-xl text-black pt-9 pb-4 px-4 bg-white/90 shadow-lg shadow-gray-400/30')]">
+            className="flex justify-between flex-col items-start relative h-52 w-40 bg cover rounded-xl text-black pt-9 pb-4 px-4 bg-[url('https://images.unsplash.com/photo-1528458965990-428de4b1cb0d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHBhcGVyfGVufDB8fDB8fHww')] bg-no-repeat bg-center bg-blend-multiply bg-cover ">
             <div>
               <h3 className="leading-tight text-lg font-bold">{elem.notesHeading}</h3>
-              <p className="mt-2 leading-tight text-xs font-semibold text-gray-600">{elem.notes}</p>
+              <p className="mt-2 leading-tight text-xs font-semibold text-gray-900">{elem.notes}</p>
             </div>
             <button onClick={() => {
               deleteNote(index)
